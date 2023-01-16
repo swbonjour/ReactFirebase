@@ -1,4 +1,5 @@
 @import '../../scss/colors.scss';
+@import '../../scss/mixins.scss';
 
 .home {
     height: 100vh;
@@ -12,4 +13,7 @@
     height: 100%;
     background-color: $dark-black;
     display: flex;
+    @include smallSize {
+        width: 100%;
+    }
 }

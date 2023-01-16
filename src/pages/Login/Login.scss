@@ -1,4 +1,5 @@
 @import '../../scss/colors.scss';
+@import '../../scss/mixins.scss';
 
 .login_container {
     height: 100vh;
@@ -17,6 +18,9 @@
     justify-content: center;
     width: 50%;
     max-width: 600px;
+    @include smallSize {
+        width: 80%;
+    }
 }
 
 .login_content-data {
@@ -34,6 +38,9 @@
     width: 50%;
     height: 100%;
     border-radius: 10px;
+    @include smallSize {
+        display: none;
+    }
 }
 
 .login_content form {
@@ -46,13 +53,13 @@
 }
 
 .logo {
-    font-size: calc(12px + 8 * (100vw / 1440));
+    font-size: calc(14px + 6 * (100vw / 1440));
     font-weight: 600;
     color: $white;
 }
 
 .title {
-    font-size: calc(8px + 6 * (100vw / 1440));
+    font-size: calc(12px + 4 * (100vw / 1440));
     font-weight: 400;
     color: $white;
 }
@@ -98,7 +105,7 @@ input[type="file"] {
 }
 
 .register {
-    font-size: calc(2px + 8 * (100vw / 1440));
+    font-size: calc(8px + 2 * (100vw / 1440));
     color: $placeholder;
 }
 

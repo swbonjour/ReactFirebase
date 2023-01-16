@@ -1,4 +1,5 @@
 @import '../scss/colors.scss';
+@import '../scss/mixins.scss';
 
 .chat_item {
     width: 100%;
@@ -10,11 +11,16 @@
     gap: 2rem;
     overflow: hidden;
     cursor: pointer;
+    @include mediumSize {
+        gap: 1rem;
+    }
 }
 
 .chat_item-img {
     border-radius: 50%;
     overflow: hidden;
+    min-width: 40px;
+    min-height: 40px;
 }
 
 .chat_item-content {
@@ -24,7 +30,7 @@
 }
 
 .chat_item-message {
-    font-size: calc(4px + 6 * (100vw / 1440));
+    font-size: calc(6px + 4 * (100vw / 1440));
     color: $placeholder;
     overflow: hidden;
 }

@@ -1,6 +1,10 @@
 @import '../scss/colors.scss';
+@import '../scss/mixins.scss';
 
 .sidebar {
     width: 30%;
     border-right: 2px solid $light-black;
+    @include smallSize {
+        display: none;
+    }
 }

@@ -1,4 +1,5 @@
 @import '../../scss/colors.scss';
+@import '../../scss/mixins.scss';
 
 .register_container {
     height: 100vh;
@@ -17,6 +18,10 @@
     justify-content: center;
     width: 50%;
     max-width: 600px;
+    @include smallSize {
+        width: 80%;
+        height: 60%;
+    }
 }
 
 .register_content-data {
@@ -34,6 +39,9 @@
     width: 50%;
     height: 100%;
     border-radius: 10px;
+    @include smallSize {
+        display: none;
+    }
 }
 
 .register_content form {

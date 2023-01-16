@@ -1,4 +1,5 @@
 @import "../scss/colors.scss";
+@import "../scss/mixins.scss";
 
 .message_content {
     color: white;
@@ -30,17 +31,26 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    @include ultraSmallSize {
+        display: none;
+    }
 }
 
 .message_content-img {
     width: 100%;
     max-width: 260px;
     height: auto;
+    @include mediumSize {
+        max-width: 160px;
+    }
 }
 
 .message_content-text {
     word-wrap: break-word;
-    max-width: 260px
+    max-width: 260px;
+    @include mediumSize {
+        max-width: 160px;
+    }
 }
 
 .message.owner {
