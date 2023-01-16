@@ -1,4 +1,6 @@
 import React from 'react'
+import { signOut } from 'firebase/auth'
+import { auth } from '../utils/firebaseAuth'
 import './Navbar.scss'
 
 export const Navbar = () => {
@@ -9,7 +11,7 @@ export const Navbar = () => {
             <div className="profile_img"><img src={require('../imgs/profileImg.jpg')} alt="profile" width='40' height='40'/></div>
             <div className="profile_name">Aboba</div>
         </div>
-        <button className="logout">Logout</button>
+        <button className="logout" onClick={() => signOut(auth)}>Logout</button>
     </div>
   )
 }
