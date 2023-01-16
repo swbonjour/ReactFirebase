@@ -1,0 +1,15 @@
+@import '../../scss/colors.scss';
+
+.home {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 80%;
+    height: 100%;
+    background-color: $dark-black;
+    display: flex;
+}

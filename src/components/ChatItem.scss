@@ -1,0 +1,38 @@
+@import '../scss/colors.scss';
+
+.chat_item {
+    width: 100%;
+    height: 8%;
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    background-color: $light-black;
+    gap: 2rem;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.chat_item-img {
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.chat_item-content {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+}
+
+.chat_item-message {
+    font-size: calc(4px + 6 * (100vw / 1440));
+    color: $placeholder;
+    overflow: hidden;
+}
+
+.chat_item:hover {
+    background-color: $semi-black;
+}
+
+.chat_item-name {
+    font-size: calc(12px + 4 * (100vw / 1440));
+}

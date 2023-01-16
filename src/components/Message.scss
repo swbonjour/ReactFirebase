@@ -1,0 +1,50 @@
+@import "../scss/colors.scss";
+
+.message_content {
+    color: white;
+    background-color: $semi-black;
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+.message {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+    margin-top: 1rem;
+}
+
+.message_info-img {
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.message_info-time {
+    font-size: calc(8px + 4 * (100vw / 1440));
+    color: $placeholder;
+    margin-top: 5px;
+}
+
+.message_info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.message_content-img {
+    width: 100%;
+    max-width: 260px;
+    height: auto;
+}
+
+.message_content-text {
+    word-wrap: break-word;
+    max-width: 260px
+}
+
+.message.owner {
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: row-reverse;
+}
