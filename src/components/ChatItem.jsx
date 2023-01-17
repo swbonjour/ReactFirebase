@@ -1,13 +1,13 @@
 import React from 'react'
 import './ChatItem.scss'
 
-export const ChatItem = () => {
+export const ChatItem = ({username, message, imgUrl}) => {
   return (
     <div className="chat_item">
-        <div className="chat_item-img"><img src={require('../imgs/profileImg.jpg')} alt="profiel" width='40' height='40' /></div>
+        <div className="chat_item-img"><img src={imgUrl || require('../imgs/profileImg.jpg')} alt="profile" width='40' height='40' /></div>
         <div className="chat_item-content">
-            <p className="chat_item-name">Aboba</p>
-            <p className="chat_item-message">Abobaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+            <p className="chat_item-name">{username || "Aboba"}</p>
+            <p className="chat_item-message">{message || "Abobaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"}</p>
         </div>
     </div>
   )

@@ -7,28 +7,26 @@ export const db = getFirestore();
 
 export const uploadData = async (username, img, user) => {
     console.log(user);
-    const storageRef = ref(storage, username);
+    const randomDate = Math.floor(Date.now() / 1000);
+    const storageRef = ref(storage, username + `${randomDate}`);
 
-    const uploadTask = uploadBytesResumable(storageRef, img);
-    uploadTask.on((error) => {
-        return true
-    },
-    () => {
-        getDownloadURL(uploadTask.snapshot.ref)
-            .then(async (downloadUrl) => {
-                await updateProfile(user, {
-                    displayName: username,
-                    photoURL: downloadUrl,
-                });
-                await setDoc(doc(db, 'users', user.uid), {
-                    uid: user.uid,
-                    displayName: username,
-                    email: user.email,
-                    photoURL: downloadUrl,
-                });
-                await setDoc(doc(db, 'userChats', user.uid), {
-                    
+    await uploadBytesResumable(storageRef, img).then(
+        () => {
+            getDownloadURL(storageRef)
+                .then(async (downloadUrl) => {
+                    await updateProfile(user, {
+                        displayName: username,
+                        photoURL: downloadUrl,
+                    });
+                    await setDoc(doc(db, 'users', user.uid), {
+                        uid: user.uid,
+                        displayName: username,
+                        email: user.email,
+                        photoURL: downloadUrl,
+                    });
+                    await setDoc(doc(db, 'userChats', user.uid), {
+
+                    })
                 })
-            })
     })
 }
