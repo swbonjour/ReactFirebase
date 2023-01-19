@@ -100,10 +100,6 @@
     cursor: pointer;
 }
 
-input[type="file"] {
-    display: none;
-}
-
 .register {
     font-size: calc(8px + 2 * (100vw / 1440));
     color: $placeholder;

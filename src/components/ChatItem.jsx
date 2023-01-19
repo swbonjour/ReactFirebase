@@ -7,7 +7,7 @@ export const ChatItem = ({username, message, imgUrl, select}) => {
         <div className="chat_item-img"><img src={imgUrl || require('../imgs/profileImg.jpg')} alt="profile" width='40' height='40' /></div>
         <div className="chat_item-content">
             <p className="chat_item-name">{username || "Aboba"}</p>
-            <p className="chat_item-message">{message || "Abobaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"}</p>
+            <p className="chat_item-message">{message}</p>
         </div>
     </div>
   )
