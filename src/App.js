@@ -12,7 +12,7 @@ function App() {
 
   const ProtectedRoute = ({children}) => {
     if(!currentUser) {
-      return <Navigate to='/login' />
+      return <Navigate to='/ReactFirebase/login' />
     } else {
       return children
     }
@@ -21,10 +21,10 @@ function App() {
     <div>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Navigate to="/login" />}></Route>
-          <Route path='/login' element={<Login />}></Route>
-          <Route path='/register' element={<Register />}></Route>
-          <Route path='/home' index element={<ProtectedRoute><Home /></ProtectedRoute>}></Route>
+          <Route path="/ReactFirebase" element={<Navigate to="/ReactFirebase/login" />}></Route>
+          <Route path='/ReactFirebase/login' element={<Login />}></Route>
+          <Route path='/ReactFirebase/register' element={<Register />}></Route>
+          <Route path='/ReactFirebase/home' index element={<ProtectedRoute><Home /></ProtectedRoute>}></Route>
         </Routes>
       </BrowserRouter>
     </div>

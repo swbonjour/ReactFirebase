@@ -17,7 +17,7 @@ export const Login = () => {
         try {
            await signInWithEmailAndPassword(auth, email, password); 
            setErr(false);
-           navigate('/home');
+           navigate('/ReactFirebase/home');
         } catch (error) {
            setErr(true); 
         }
@@ -34,7 +34,7 @@ export const Login = () => {
                     <input type="password" placeholder='password'/>
                     <button>sign in</button>
                 </form>
-                <p className="register">Don't have an account? <Link to='/register'>Register</Link></p>
+                <p className="register">Don't have an account? <Link to='/ReactFirebase/register'>Register</Link></p>
                 {err && <p className="title">Something went wrong</p>}
             </div>
                 <div className="login_content-img">
