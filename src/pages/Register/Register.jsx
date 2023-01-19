@@ -24,7 +24,7 @@ export const Register = () => {
             setErr(false);
         }
         await uploadData(username, img, user);
-        navigate('/home');
+        navigate('/ReactFirebase/home');
     }
     
   return (
