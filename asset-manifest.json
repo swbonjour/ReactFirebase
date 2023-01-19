@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/ReactFirebase/static/css/main.ed06860a.css",
+    "main.js": "/ReactFirebase/static/js/main.8048ff34.js",
+    "static/media/background.jpg": "/ReactFirebase/static/media/background.7ac18d639774c53a6db3.jpg",
+    "static/media/profileImg.jpg": "/ReactFirebase/static/media/profileImg.85af8250becea0778ce2.jpg",
+    "index.html": "/ReactFirebase/index.html",
+    "main.ed06860a.css.map": "/ReactFirebase/static/css/main.ed06860a.css.map",
+    "main.8048ff34.js.map": "/ReactFirebase/static/js/main.8048ff34.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ed06860a.css",
+    "static/js/main.8048ff34.js"
+  ]
+}
