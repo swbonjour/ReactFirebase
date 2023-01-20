@@ -4,7 +4,14 @@
 .sidebar {
     width: 30%;
     border-right: 2px solid $light-black;
+    transform: translateX(0);
     @include smallSize {
-        display: none;
+        display: block;
+        width: 100%;
+        position: absolute;
+        background-color: $dark-black;
+        height: 100vh;
+        z-index: 1;
+        transition: 0.2s all;
     }
 }

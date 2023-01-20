@@ -12,7 +12,7 @@ export const Chat = () => {
     <div className="chat" style={{color: 'white'}}>
         <ChatNavbar></ChatNavbar>
         {Object.keys(data.user).length != 0 && <Messages></Messages>}
-        <Input></Input>
+        {Object.keys(data.user).length != 0 && <Input></Input>}
     </div>
   )
 }

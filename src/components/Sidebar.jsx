@@ -1,4 +1,4 @@
-import { React, useState, useContext } from 'react'
+import { React, useState, useContext, useRef } from 'react'
 import { Navbar } from './Navbar'
 import { Searchbar } from './Searchbar'
 import { ChatItem } from './ChatItem'
@@ -14,9 +14,20 @@ export const Sidebar = () => {
   const {currentUser} = useContext(AuthContext);
   const { dispatch } = useContext(ChatContext);
 
+  const sidebarRef = useRef();
+
   const handleSelect = (user) => {
     dispatch({type: "CHANGE_USER", payload: user})
+    if(window.innerWidth < 700) {
+      sidebarRef.current.style.transform = 'translateX(-1000px)';
+    }
   }
+
+  window.addEventListener('resize', (e) => {
+    if(sidebarRef.current?.style.transform != null && window.innerWidth > 700) {
+      sidebarRef.current.style.transform = 'translateX(0)';
+    }
+  })
 
   useEffect(() => {
     const userFetched = () => {
@@ -28,7 +39,7 @@ export const Sidebar = () => {
     currentUser.uid && userFetched();
   }, [currentUser.uid]);
   return (
-    <div className="sidebar" style={{color: 'white'}}>
+    <div className="sidebar" style={{color: 'white'}} ref={sidebarRef}>
         <Navbar></Navbar>
         <Searchbar></Searchbar>
         {Object.entries(chats).sort((a,b) => b[1][1].date - a[1][1].date).map((chat) => 

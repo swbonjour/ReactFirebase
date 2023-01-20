@@ -1,5 +1,5 @@
 import { doc, onSnapshot } from 'firebase/firestore'
-import React from 'react'
+import React, { useRef } from 'react'
 import { useState } from 'react'
 import { useEffect } from 'react'
 import { useContext } from 'react'
@@ -12,6 +12,8 @@ export const Messages = () => {
   const { data } = useContext(ChatContext);
   const [messages, setMessages] = useState([]);
 
+  const ref = useRef();
+
   useEffect(() => {
     const unsub = onSnapshot(doc(db,'chats',data.chatId), (doc) => {
       if(doc.exists()) {
@@ -19,10 +21,12 @@ export const Messages = () => {
       }
     })
 
+    ref.current.scroll({ top: ref.current.scrollHeight });
+
     return () => unsub();
-  }, [data.chatId])
+  }, [data.chatId, messages.length])
   return (
-    <div className="messages">
+    <div className="messages" ref={ref}>
         {messages.map((m) => (
           <Message message={m} key={m.id}/>
         ))}

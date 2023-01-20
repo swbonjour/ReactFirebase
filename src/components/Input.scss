@@ -1,4 +1,5 @@
 @import '../scss/colors.scss';
+@import '../scss/mixins.scss';
 
 .input_chat {
     width: 100%;
@@ -48,4 +49,12 @@
     border: none;
     border-radius: 50%;
     padding: 1%;
+    position: relative;
+}
+
+.input_chat-file img {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    border-radius: 50%;
 }
