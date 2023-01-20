@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/ReactFirebase/static/css/main.ed06860a.css",
-    "main.js": "/ReactFirebase/static/js/main.f8b0cc1a.js",
+    "main.css": "/ReactFirebase/static/css/main.a6676cf9.css",
+    "main.js": "/ReactFirebase/static/js/main.135e1f80.js",
     "static/media/background.jpg": "/ReactFirebase/static/media/background.7ac18d639774c53a6db3.jpg",
     "static/media/profileImg.jpg": "/ReactFirebase/static/media/profileImg.85af8250becea0778ce2.jpg",
     "index.html": "/ReactFirebase/index.html",
-    "main.ed06860a.css.map": "/ReactFirebase/static/css/main.ed06860a.css.map",
-    "main.f8b0cc1a.js.map": "/ReactFirebase/static/js/main.f8b0cc1a.js.map"
+    "main.a6676cf9.css.map": "/ReactFirebase/static/css/main.a6676cf9.css.map",
+    "main.135e1f80.js.map": "/ReactFirebase/static/js/main.135e1f80.js.map"
   },
   "entrypoints": [
-    "static/css/main.ed06860a.css",
-    "static/js/main.f8b0cc1a.js"
+    "static/css/main.a6676cf9.css",
+    "static/js/main.135e1f80.js"
   ]
 }
